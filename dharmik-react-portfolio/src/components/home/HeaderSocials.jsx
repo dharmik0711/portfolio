@@ -11,7 +11,7 @@ const HeaderSocials = () => {
 
             
 
-            <a href='https://dev.to/gregsithole' className='home__social-link' target='_blank' rel='noreferrer'>
+            <a href='' className='home__social-link' target='_blank' rel='noreferrer'>
                 <FaDev />
             </a>
 
@@ -19,7 +19,7 @@ const HeaderSocials = () => {
                 <FaLinkedinIn />
             </a>
 
-            <a href='https://wwww.facebook.com/Greg.Sithole' className='home__social-link' target='_blank' rel='noreferrer'>
+            <a href='' className='home__social-link' target='_blank' rel='noreferrer'>
                 <FaFacebookF />
             </a>
 

@@ -7,33 +7,33 @@ const Menu = [
 	{
 		id: 1,
 		image: Work1,
-		title: "React Native Jobs App",
-		category: ["Frontend", "React"],
-		repositoryUrl: "https://github.com/GregSithole/react-native-jobs"
+		title: "Hangman Game",
+		category: ["Hangman game",],
+		repositoryUrl: "https://github.com/dharmik0711/python/tree/main/Hangman_game"
 	},
 	{
 		id: 2,
 		image: Work2,
-		title: "Cryptoverse",
-		category: ["Frontend", "React"],
+		title: "Flappy bird clone",
+		category: ["Flappy bird clone", "React"],
 		url: "https://cryptoverse.gregsithole.com",
-		repositoryUrl: "https://github.com/GregSithole/crypto-app"
+		repositoryUrl: "https://github.com/dharmik0711/Flappy_Bird"
 	},
 	{
 		id: 3,
 		image: Work3,
-		title: "Travel Advisor",
-		category: ["Frontend"],
+		title: "X and O",
+		category: ["X and O"],
 		url: "https://travel.gregsithole.com",
-		repositoryUrl: "https://github.com/GregSithole/travel-advisor"
+		repositoryUrl: "https://github.com/dharmik0711/X-and-O-game-"
 	},
 	{
 		id: 4,
 		image: Work4,
-		title: "Wallhaven CLI",
-		category: ["Backend"],
+		title: "Portfolio",
+		category: ["My Portfolio"],
 		url: "https://www.npmjs.com/package/wallhaven-cli",
-		repositoryUrl: "https://github.com/GregSithole/wallhaven-cli"
+		repositoryUrl: "https://github.com/dharmik0711/Portfolio_1"
 	}
 ];
 

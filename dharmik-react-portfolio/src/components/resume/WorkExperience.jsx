@@ -1,19 +1,25 @@
 const WorkExperience = [
     {
         id: 1,
-        title: "Software Engineer",
-        company: "Kurtosys",
-        yearsActive: "January 2022 - Present",
+        title: "Computer Systems Technology – Software Development and Network Engineering",
+        company: "Sheridan college",
+        yearsActive: "January 2024 - Present",
         information: [
-            "Write modern, performant, maintainable code for a diverse array of internal projects",
-            "Communicate with multi-disciplinary teams of engineers, team leads, and QA Engineers on a daily basis",
-        ],
-    },
+            "Proficient in software development, including application design, coding, and debugging across various programming languages",
+            "Skilled in network engineering, with experience in configuring secure networks and managing system infrastructures"],
+
+
+
+
+
+     
+    },    
+   
     {
         id: 2,
-        title: "Junior Software Developer",
-        company: "Entrostat",
-        yearsActive: "May 2017 - December 2021",
+        title: "freelance Software Developer ",
+        company: "Freelance",
+        yearsActive: "sept 2023 - may 2024",
         information: [
             "Improved and optimized the company's website for a seamless customer experience",
             "Created, communicated, and managed project plans & project timelines",
@@ -22,23 +28,31 @@ const WorkExperience = [
     },
     {
         id: 3,
-        title: "Junior Software Developer",
-        company: "Empire State",
-        yearsActive: "Feburary 2016 - April 2017",
+        title: "HTMl and Css in depth ",
+        company: "Meta certified",
+        yearsActive: "Sep 2023",
         information: [
-            "Planned, developed, tested, deployed, and maintained web applications and mobile applications",
+            "Create a simple form with a responsive layout using HTML5 and CSS",
+
+"Create a responsive layout using CSS ",
+
+"Create a UI using Bootstrap",
+
+"Implement debugging tools",
             "Worked well independently and on a team to solve problems."
         ],
     },
     {
         id: 4,
-        title: "Software Development Intern",
-        company: "The Digital Academy",
-        yearsActive: "Novembe 2015 - January 2016",
+        title: "C for Everyone Programming Fundamentals",
+        company: "University of California, Santa Cruz",
+        yearsActive: "Sep 2023",
         information: [
-            "Served as a dedicated and supportive Intern in a fast-paced environment",
-            "Worked to solve complex problems using the latest in Mobile and Web Technologies.",
-        ],
+           " Write a simple program.",
+
+"Compile, debug, and run a program.",
+
+"Apply concepts related to arrays & pointers, functions & storage classes, logic operators & various question types, lexical elements & data types"],
     },
     {
         id: 5,

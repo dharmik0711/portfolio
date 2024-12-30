@@ -1,114 +1,105 @@
 import React, { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
-import emailjs from "@emailjs/browser";
+import "../contact/Contact.css";
+import { initializeApp } from "firebase/app";
+import { getFirestore, collection, addDoc } from "firebase/firestore";
 
-import "./Contact.css";
-import "react-toastify/dist/ReactToastify.css";
+const firebaseConfig = {
+    apiKey: "AIzaSyDxSInTXEuwK6TX1RrRnCSyzecYxXGn6ek",
+    authDomain: "myportfolio-fa5ca.firebaseapp.com",
+    projectId: "myportfolio-fa5ca",
+    storageBucket: "myportfolio-fa5ca.firebasestorage.app",
+    messagingSenderId: "951011875510",
+    appId: "1:951011875510:web:2e04e7511d55e7dd0b6417",
+    measurementId: "G-BE7HZFL44B"
+  };
 
-const Contact = (props) => {
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [subject, setSubject] = useState("");
-    const [message, setMessage] = useState("");
-    const [loading, setLoading] = useState(false);
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 
-    const submitHandler = async (e) => {
-        e.preventDefault();
-        if (!name || !email || !subject || !message) {
-            return toast.error("Please complete the form above");
-        }
+const Feedback = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const [loading, setLoading] = useState(false);
 
-        setLoading(true);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
 
-        const data = {
-            name,
-            email,
-            subject,
-            message,
-        };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const { name, email, subject, message } = formData;
 
-        emailjs
-            .send(
-                process.env.REACT_APP_EMAILJS_SERVICE_ID,
-                process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-                data,
-                process.env.REACT_APP_EMAILJS_PUBLIC_API
-            )
-            .then(
-                (result) => {
-                    setLoading(false);
-                    toast.success(`Successfully sent email.`);
-                },
-                (error) => {
-                    setLoading(false);
-                    console.log(error);
-                    toast.error(error.text);
-                }
-            );
-    };
+    if (!name || !email || !subject || !message) {
+      return toast.error("Please fill in all fields!");
+    }
 
-    return (
-        <section className="contact container section" id="contact">
-            <h2 className="section__title">Get In Touch</h2>
+    setLoading(true);
 
-            <div className="contact__container grid">
-                <div className="contact__info">
-                    <h3 className="contact__title">Let's talk about everything!</h3>
-                    <p className="contact__details">
-                        Don't like forms? Send me an email. 👋
-                    </p>
-                </div>
+    try {
+      // Add feedback to Firestore
+      await addDoc(collection(db, "feedbacks"), {
+        name,
+        email,
+        subject,
+        message,
+        timestamp: new Date(),
+      });
 
-                <form onSubmit={submitHandler} className="contact__form">
-                    <div className="contact__form-group">
-                        <div className="contact__form-div">
-                            <input
-                                type="text"
-                                className="contact__form-input"
-                                placeholder="Insert your name"
-                                onChange={(e) => setName(e.target.value)}
-                            />
-                        </div>
+      toast.success("Feedback submitted successfully!");
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    } catch (error) {
+      console.error("Error submitting feedback: ", error);
+      toast.error("Failed to submit feedback. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
-                        <div className="contact__form-div">
-                            <input
-                                type="email"
-                                className="contact__form-input"
-                                placeholder="Insert your email"
-                                onChange={(e) => setEmail(e.target.value)}
-                            />
-                        </div>
-                    </div>
-
-                    <div className="contact__form-div">
-                        <input
-                            type="text"
-                            className="contact__form-input"
-                            placeholder="Insert your subject"
-                            onChange={(e) => setSubject(e.target.value)}
-                        />
-                    </div>
-
-                    <div className="contact__form-div contact__form-area">
-                        <textarea
-                            name=""
-                            id=""
-                            cols="30"
-                            rows="10"
-                            className="contact__form-input"
-                            placeholder="Write your message"
-                            onChange={(e) => setMessage(e.target.value)}
-                        ></textarea>
-                    </div>
-
-                    <button type="submit" className="btn">
-                        {loading ? "Sending..." : "Send Message"}
-                    </button>
-                </form>
-                <ToastContainer position="bottom-right" theme={props.theme} />
-            </div>
-        </section>
-    );
+  return (
+    <section className="feedback">
+      <h2>Feedback</h2>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          value={formData.name}
+          onChange={handleChange}
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Your Email"
+          value={formData.email}
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          name="subject"
+          placeholder="Subject"
+          value={formData.subject}
+          onChange={handleChange}
+        />
+        <textarea
+          name="message"
+          placeholder="Your Feedback"
+          value={formData.message}
+          onChange={handleChange}
+        ></textarea>
+        <button type="submit" disabled={loading}>
+          {loading ? "Submitting..." : "Submit Feedback"}
+        </button>
+      </form>
+      <ToastContainer position="bottom-right" />
+    </section>
+  );
 };
 
-export default Contact;
+export default Feedback;
