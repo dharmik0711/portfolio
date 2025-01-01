@@ -8,25 +8,26 @@ const data = [
     {
         id: 1,
         image: Image1,
-        title: "Responsive design",
+        title: "Python",
         description:
-            "Ensuring that the website/mobile app is responsive across all platforms",
+            "Developing and maintaining backend systems, data analysis, and automation using Python.",
     },
     {
         id: 2,
         image: Image2,
-        title: "Web Development",
+        title: "React",
         description:
-            "Ensuring that that a website meets the correct standards, and also ensuring it's well maintained",
+            "Building dynamic and interactive user interfaces with reusable components in React.",
     },
     {
         id: 3,
         image: Image3,
-        title: "Mobile Development",
+        title: "Web Development",
         description:
-            "Ensuring that a mobile app meets the correct standards, and also ensuring it's well maintained",
+            "Designing and developing responsive, user-friendly websites and ensuring cross-platform compatibility.",
     },
 ];
+
 
 const Services = () => {
     return (
