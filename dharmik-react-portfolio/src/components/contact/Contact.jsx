@@ -63,7 +63,7 @@ const Feedback = () => {
   };
 
   return (
-    <section className="feedback">
+    <section className="feedback"  >
       <h2>Feedback</h2>
       <form onSubmit={handleSubmit}>
         <input

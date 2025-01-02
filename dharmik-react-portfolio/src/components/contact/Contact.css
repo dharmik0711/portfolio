@@ -3,7 +3,8 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f9;
+  background-color: var(--container-color);
+  color: #ffffff; /* Make all text white */
 }
 
 /* Feedback Section */
@@ -11,16 +12,16 @@ body {
   padding: 2rem;
   max-width: 600px;
   margin: 2rem auto;
-  background: #ffffff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+  background: var(--container-color);
+  box-shadow: var(--shadow);
+  border-radius: 1.875rem;
 }
 
 .feedback h2 {
-  font-size: 2rem;
+  font-size: var(--h3-font-size);
   text-align: center;
   margin-bottom: 1.5rem;
-  color: #333;
+  color: #ffffff; /* White text for the header */
 }
 
 /* Form Styling */
@@ -34,15 +35,17 @@ body {
   font-size: 1rem;
   padding: 0.75rem;
   margin-bottom: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  border: none;
   outline: none;
+  border-radius: 1.875rem;
+  background-color: var(--container-color);
+  color: #ffffff; /* White text inside form fields */
+  box-shadow: var(--shadow);
   transition: all 0.3s ease;
 }
 
 .feedback input:focus,
 .feedback textarea:focus {
-  border-color: #007bff;
   box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
 }
 
@@ -57,10 +60,10 @@ body {
   padding: 0.75rem;
   font-size: 1rem;
   font-weight: bold;
-  color: #ffffff;
-  background-color: #007bff;
+  color: #ffffff; /* White text in the button */
+  background-color: var(--btn-color);
   border: none;
-  border-radius: 4px;
+  border-radius: 1.875rem;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -71,16 +74,27 @@ body {
 }
 
 .feedback button:hover:not(:disabled) {
-  background-color: #0056b3;
+  background-color: var(--btn-hover-color);
 }
 
 /* Toast Notifications */
 .Toastify__toast--success {
-  background: #28a745;
+  background: var(--success-color);
 }
 
 .Toastify__toast--error {
-  background: #dc3545;
+  background: var(--error-color);
+}
+
+/* Image Styling */
+.feedback img {
+  width: 100%;
+  max-width: 200px;  /* Make the image smaller */
+  display: block;
+  margin: 2rem auto;  /* Center the image */
+  border-radius: 8px;  /* Rounded corners for a professional look */
+  box-shadow: var(--shadow);
+  object-fit: cover;  /* Ensure the image scales nicely */
 }
 
 /* Responsive Design */
@@ -91,6 +105,37 @@ body {
   }
 
   .feedback h2 {
-    font-size: 1.5rem;
+    font-size: var(--h3-font-size);
   }
+
+  .feedback img {
+    max-width: 150px;  /* Make the image even smaller on mobile */
+  }
+}
+
+@media (max-width: 1024px) {
+  .feedback img {
+    max-width: 180px;  /* Slightly smaller image on tablets */
+  }
+}
+
+/* Custom Toastify Icon Styles */
+.Toastify__toast-icon {
+  width: 20px !important;  /* Set a specific width */
+  height: 20px !important; /* Set a specific height */
+  margin-right: 10px; /* Adjust spacing */
+}
+
+/* Adjust toast padding if needed */
+.Toastify__toast-body {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+}
+
+/* Optional: Reduce padding around the toast */
+.Toastify__toast {
+  padding: 10px 20px;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: var(--shadow); /* Apply shadow for better appearance */
 }
