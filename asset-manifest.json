@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.1617d71c.css",
-    "main.js": "/portfolio/static/js/main.34dab962.js",
+    "main.css": "/portfolio/static/css/main.9b443f1e.css",
+    "main.js": "/portfolio/static/js/main.515c5c9f.js",
     "static/media/travel.png": "/portfolio/static/media/travel.3f1e703c327327f3a246.png",
     "static/media/resume.pdf": "/portfolio/static/media/resume.d8a48484448f13e53aa8.pdf",
     "static/media/native-jobs.png": "/portfolio/static/media/native-jobs.aefeaca3698579f1e739.png",
@@ -18,11 +18,11 @@
     "static/media/dots-bg.svg": "/portfolio/static/media/dots-bg.f9af2a6a4e3508808a05.svg",
     "static/media/light-logo.svg": "/portfolio/static/media/light-logo.060bc1a33908778a0f6c21523c22a8dd.svg",
     "index.html": "/portfolio/index.html",
-    "main.1617d71c.css.map": "/portfolio/static/css/main.1617d71c.css.map",
-    "main.34dab962.js.map": "/portfolio/static/js/main.34dab962.js.map"
+    "main.9b443f1e.css.map": "/portfolio/static/css/main.9b443f1e.css.map",
+    "main.515c5c9f.js.map": "/portfolio/static/js/main.515c5c9f.js.map"
   },
   "entrypoints": [
-    "static/css/main.1617d71c.css",
-    "static/js/main.34dab962.js"
+    "static/css/main.9b443f1e.css",
+    "static/js/main.515c5c9f.js"
   ]
 }
