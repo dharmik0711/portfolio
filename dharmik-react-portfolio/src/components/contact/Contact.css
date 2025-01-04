@@ -17,64 +17,68 @@ body {
   border-radius: 1.875rem;
 }
 
-.feedback h2 {
-  font-size: var(--h3-font-size);
+.feedback__title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
   text-align: center;
-  margin-bottom: 1.5rem;
-  color: #ffffff; /* White text for the header */
+  color: var(--title-color); /* White text for the header */
 }
 
 /* Form Styling */
 .feedback form {
   display: flex;
   flex-direction: column;
+  gap: 1rem;
 }
 
-.feedback input,
-.feedback textarea {
+.feedback__input,
+.feedback__textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
   font-size: 1rem;
-  padding: 0.75rem;
-  margin-bottom: 1rem;
-  border: none;
-  outline: none;
-  border-radius: 1.875rem;
   background-color: var(--container-color);
   color: #ffffff; /* White text inside form fields */
   box-shadow: var(--shadow);
   transition: all 0.3s ease;
 }
 
-.feedback input:focus,
-.feedback textarea:focus {
-  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
-}
-
-/* Textarea Styling */
-.feedback textarea {
+.feedback__textarea {
   resize: none;
   height: 150px;
 }
 
+.feedback__input:focus,
+.feedback__textarea:focus {
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
 /* Submit Button */
-.feedback button {
-  padding: 0.75rem;
+.feedback__button {
+  padding: 0.8rem;
+  background-color: rgb(255, 76, 97);
+  color: white;
   font-size: 1rem;
-  font-weight: bold;
-  color: #ffffff; /* White text in the button */
-  background-color: var(--btn-color);
   border: none;
-  border-radius: 1.875rem;
+  border-radius: 5px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+.feedback__button:hover {
+  background-color: #005f99;
+}
+
+.feedback__button--loading {
+  background-color: #ccc;
+  cursor: not-allowed;
 }
 
 .feedback button:disabled {
   background-color: #bbb;
   cursor: not-allowed;
-}
-
-.feedback button:hover:not(:disabled) {
-  background-color: var(--btn-hover-color);
 }
 
 /* Toast Notifications */
@@ -86,17 +90,6 @@ body {
   background: var(--error-color);
 }
 
-/* Image Styling */
-.feedback img {
-  width: 100%;
-  max-width: 200px;  /* Make the image smaller */
-  display: block;
-  margin: 2rem auto;  /* Center the image */
-  border-radius: 8px;  /* Rounded corners for a professional look */
-  box-shadow: var(--shadow);
-  object-fit: cover;  /* Ensure the image scales nicely */
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
   .feedback {
@@ -104,18 +97,8 @@ body {
     margin: 1rem;
   }
 
-  .feedback h2 {
+  .feedback__title {
     font-size: var(--h3-font-size);
-  }
-
-  .feedback img {
-    max-width: 150px;  /* Make the image even smaller on mobile */
-  }
-}
-
-@media (max-width: 1024px) {
-  .feedback img {
-    max-width: 180px;  /* Slightly smaller image on tablets */
   }
 }
 

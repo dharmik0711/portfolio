@@ -85,6 +85,106 @@
   width: 90%;
   background-color: rgb(255, 209, 92);
 }
+.about__skills {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  gap: 2rem;
+}
+
+.skills__column {
+  flex: 1;
+}
+
+.skills__name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.skills__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills__list li {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.cv__download {
+  margin-top: 2rem;
+  text-align: center;
+}
+.about__description {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: white;
+}
+
+.highlight-primary {
+  font-weight: bold;
+  color: #007ACC;
+}
+
+.highlight-secondary {
+  font-weight: bold;
+  color: #28A745;
+}
+
+.highlight-accent {
+  font-weight: bold;
+  color: #FF4500;
+}
+
+.highlight-tertiary {
+  font-weight: bold;
+  color: #DC143C;
+}
+
+.highlight-gold {
+  font-weight: bold;
+  color: #FFD700;
+}
+
+.highlight-info {
+  font-weight: bold;
+  color: #20B2AA;
+}
+
+.highlight-process {
+  font-weight: bold;
+  color: #8A2BE2;
+}
+
+.highlight-tech {
+  font-weight: bold;
+  color: #4682B4;
+}
+
+.highlight-insights {
+  font-weight: bold;
+  color: #FF6347;
+}
+
+.cv__download .btn {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  background-color: #007ACC;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cv__download .btn:hover {
+  background-color: #005F99;
+}
 
 .ui__design {
   width: 80%;
