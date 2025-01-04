@@ -1,19 +1,18 @@
 import React, { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css"; // Ensure toast styles are applied
-import "../contact/Contact.css"; // Optional: Create and style your form in Feedback.css
+import "../contact/Contact.css";
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDxSInTXEuwK6TX1RrRnCSyzecYxXGn6ek",
-  authDomain: "myportfolio-fa5ca.firebaseapp.com",
-  projectId: "myportfolio-fa5ca",
-  storageBucket: "myportfolio-fa5ca.firebasestorage.app",
-  messagingSenderId: "951011875510",
-  appId: "1:951011875510:web:2e04e7511d55e7dd0b6417",
-  measurementId: "G-BE7HZFL44B",
-};
+    apiKey: "AIzaSyDxSInTXEuwK6TX1RrRnCSyzecYxXGn6ek",
+    authDomain: "myportfolio-fa5ca.firebaseapp.com",
+    projectId: "myportfolio-fa5ca",
+    storageBucket: "myportfolio-fa5ca.firebasestorage.app",
+    messagingSenderId: "951011875510",
+    appId: "1:951011875510:web:2e04e7511d55e7dd0b6417",
+    measurementId: "G-BE7HZFL44B"
+  };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
@@ -37,10 +36,8 @@ const Feedback = () => {
     e.preventDefault();
     const { name, email, subject, message } = formData;
 
-    // Check if all fields are filled
     if (!name || !email || !subject || !message) {
-      toast.error("All fields are required. Please complete the form.");
-      return;
+      return toast.error("Please fill in all fields!");
     }
 
     setLoading(true);
@@ -55,27 +52,26 @@ const Feedback = () => {
         timestamp: new Date(),
       });
 
-      toast.success("Thank you for your feedback!");
+      toast.success("Feedback submitted successfully!");
       setFormData({ name: "", email: "", subject: "", message: "" });
     } catch (error) {
-      console.error("Error submitting feedback:", error);
-      toast.error("An error occurred. Please try again later.");
+      console.error("Error submitting feedback: ", error);
+      toast.error("Failed to submit feedback. Please try again.");
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <section className="feedback">
-      <h2 className="feedback__title">Your Feedback</h2>
-      <form className="feedback__form" onSubmit={handleSubmit}>
+    <section className="feedback"  >
+      <h2>Feedback</h2>
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           name="name"
           placeholder="Your Name"
           value={formData.name}
           onChange={handleChange}
-          className="feedback__input"
         />
         <input
           type="email"
@@ -83,7 +79,6 @@ const Feedback = () => {
           placeholder="Your Email"
           value={formData.email}
           onChange={handleChange}
-          className="feedback__input"
         />
         <input
           type="text"
@@ -91,24 +86,18 @@ const Feedback = () => {
           placeholder="Subject"
           value={formData.subject}
           onChange={handleChange}
-          className="feedback__input"
         />
         <textarea
           name="message"
           placeholder="Your Feedback"
           value={formData.message}
           onChange={handleChange}
-          className="feedback__textarea"
         ></textarea>
-        <button
-          type="submit"
-          disabled={loading}
-          className={`feedback__button ${loading ? "feedback__button--loading" : ""}`}
-        >
+        <button type="submit" disabled={loading}>
           {loading ? "Submitting..." : "Submit Feedback"}
         </button>
       </form>
-      <ToastContainer position="bottom-right" autoClose={5000} />
+      <ToastContainer position="bottom-right" />
     </section>
   );
 };
