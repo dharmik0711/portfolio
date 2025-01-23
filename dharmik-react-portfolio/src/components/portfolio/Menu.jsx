@@ -16,7 +16,7 @@ const Menu = [
 		image: Work2,
 		title: "Flappy bird clone",
 		category: ["Flappy bird clone", "React"],
-		url: "https://cryptoverse.gregsithole.com",
+		url: "",
 		repositoryUrl: "https://github.com/dharmik0711/Flappy_Bird"
 	},
 	{
@@ -24,7 +24,7 @@ const Menu = [
 		image: Work3,
 		title: "X and O",
 		category: ["X and O"],
-		url: "https://travel.gregsithole.com",
+		url: "",
 		repositoryUrl: "https://github.com/dharmik0711/X-and-O-game-"
 	},
 	{
@@ -32,7 +32,7 @@ const Menu = [
 		image: Work4,
 		title: "Portfolio",
 		category: ["My Portfolio"],
-		url: "https://www.npmjs.com/package/wallhaven-cli",
+		url: "",
 		repositoryUrl: "https://github.com/dharmik0711/Portfolio_1"
 	}
 ];

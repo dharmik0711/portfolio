@@ -1,4 +1,5 @@
-/* General Styling */
+
+
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
@@ -9,12 +10,14 @@ body {
 
 /* Feedback Section */
 .feedback {
-  padding: 2rem;
+  padding: 2em;
   max-width: 600px;
-  margin: 2rem auto;
+  margin: 0 auto; /* Ensure no extra margin at the bottom */
   background: var(--container-color);
   box-shadow: var(--shadow);
   border-radius: 1.875rem;
+  padding-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 .feedback__title {
@@ -55,6 +58,7 @@ body {
   box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
 }
 
+
 /* Submit Button */
 .feedback__button {
   padding: 0.8rem;
@@ -91,16 +95,16 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .feedback {
     padding: 1.5rem;
     margin: 1rem;
-  }
+  } */
 
-  .feedback__title {
+  /* .feedback__title {
     font-size: var(--h3-font-size);
   }
-}
+} */
 
 /* Custom Toastify Icon Styles */
 .Toastify__toast-icon {

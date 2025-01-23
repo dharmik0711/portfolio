@@ -11,17 +11,13 @@ const HeaderSocials = () => {
 
             
 
-            <a href='' className='home__social-link' target='_blank' rel='noreferrer'>
-                <FaDev />
-            </a>
+            
 
             <a href='https://www.linkedin.com/in/dharmik-patel-0ba035275/' className='home__social-link' target='_blank' rel='noreferrer'>
                 <FaLinkedinIn />
             </a>
 
-            <a href='' className='home__social-link' target='_blank' rel='noreferrer'>
-                <FaFacebookF />
-            </a>
+           
 
             <a href='https://www.twitter.com/dharmik0711' className='home__social-link' target='__blank' rel='noreferrer'>
                 <FaTwitter />

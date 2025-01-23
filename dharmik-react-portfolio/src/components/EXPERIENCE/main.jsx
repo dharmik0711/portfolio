@@ -1,16 +1,16 @@
 import React, { useState } from "react";
-import "./Resume.css";
+import "./experience.css";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import Button from "./Button";
+import Button from "./Button.jsx";
 
-import WorkExperience from "./WorkExperience";
+import Experience from "./experience.jsx";
 
 const Resume = () => {
     const [tabIndex, setTabIndex] = useState(0);
 
     return (
         <section className="resume container section" id="resume">
-            <h2 className="section__title">Education</h2>
+            <h2 className="section__title">Experience</h2>
 
             <div className="resume__container">
                 <Tabs
@@ -21,7 +21,7 @@ const Resume = () => {
                     selectedTabPanelClassName={"is-active"}
                 >
                     <TabList className="tab__list">
-                        {WorkExperience.map((experience, index) => {
+                        {Experience.map((experience, index) => {
                             const { id, company } = experience;
                             return (
                                 <Tab className="tab" key={`company-${id}`}>
@@ -31,7 +31,7 @@ const Resume = () => {
                         })}
                     </TabList>
 
-                    {WorkExperience.map((experience) => {
+                    {Experience.map((experience) => {
                         const { id, company, yearsActive, title, information } = experience;
                         return (
                             <TabPanel className="tab__panel" key={`panel-${id}`}>
@@ -49,23 +49,7 @@ const Resume = () => {
                     })}
                 </Tabs>
 
-                <Tabs>
-                {WorkExperience.map((experience) => {
-                        const { id, company, yearsActive, title, information } = experience;
-                        return (
-                            <TabPanel className="tab__panel" key={`panel-${id}`}>
-                                <h2 className="tab__panel-title">
-                                    {title} @ {company}
-                                </h2>
-                                <p className="tab__panel-subtitle">{yearsActive}</p>
-                                <ul className="tab__panel-list">
-                                    {information.map((info, index) => {
-                                        return <li key={`info-${index}`}>{info}</li>;
-                                    })}
-                                </ul>
-                            </TabPanel>   );
-                    })}
-                </Tabs>
+             
             </div>
         </section>
     );

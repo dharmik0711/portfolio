@@ -60,11 +60,7 @@ const Sidebar = (props) => {
                                 </a>
                             </li>
 
-                            <li className="nav__item">
-                                <a href="#blog" className="nav__link">
-                                    <RiDraftLine />
-                                </a>
-                            </li>
+                           
 
                             <li className="nav__item">
                                 <a href="#contact" className="nav__link">
@@ -75,7 +71,9 @@ const Sidebar = (props) => {
                     </div>
                 </nav>
 
-                
+                <div className="nav__footer">
+                   
+                </div>
             </aside>
 
             <div className={toggle ? 'nav__toggle nav__toggle-open' : 'nav__toggle'} onClick={() => showMenu(!toggle)}>

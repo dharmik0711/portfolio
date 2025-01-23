@@ -27,7 +27,13 @@
   column-gap: 1.75rem;
   margin: 1.5rem 0;
 }
-
+.home__socials {
+  display: flex;
+  justify-content: center; /* Centers items horizontally */
+  align-items: center; /* Centers items vertically */
+  gap: 15px; /* Adjust the spacing between the icons */
+  margin-top: 20px; /* Optional, adjust according to your layout */
+}
 .home__social-link {
   color: var(--title-color);
   font-size: 1.3rem;
