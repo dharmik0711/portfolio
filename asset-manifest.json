@@ -1,15 +1,13 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.9b443f1e.css",
-    "main.js": "/portfolio/static/js/main.515c5c9f.js",
+    "main.css": "/portfolio/static/css/main.6149354b.css",
+    "main.js": "/portfolio/static/js/main.fb13467d.js",
     "static/media/travel.png": "/portfolio/static/media/travel.3f1e703c327327f3a246.png",
     "static/media/resume.pdf": "/portfolio/static/media/resume.d8a48484448f13e53aa8.pdf",
     "static/media/native-jobs.png": "/portfolio/static/media/native-jobs.aefeaca3698579f1e739.png",
     "static/media/blog-1.svg": "/portfolio/static/media/blog-1.f765e1b0fff9fb909ed6db7a682ac4e2.svg",
     "static/media/cryptoverse.png": "/portfolio/static/media/cryptoverse.9082016cd20b7f1e0ae0.png",
     "static/media/memoji.webp": "/portfolio/static/media/memoji.be843e20084045e77f5f.webp",
-    "static/media/avatar-3.svg": "/portfolio/static/media/avatar-3.5bf46e6d1530bd73b02b567041e76e4d.svg",
-    "static/media/avatar-4.svg": "/portfolio/static/media/avatar-4.1859fab5f65d2a41fed620abbb0170e5.svg",
     "static/media/logo.png": "/portfolio/static/media/logo.1f27b0b95c80405936a7.png",
     "static/media/service-3.svg": "/portfolio/static/media/service-3.5ce3e21e961c980ca809977cf695357b.svg",
     "static/media/service-2.svg": "/portfolio/static/media/service-2.360040db94db03a3ca860042e67c4912.svg",
@@ -18,11 +16,11 @@
     "static/media/dots-bg.svg": "/portfolio/static/media/dots-bg.f9af2a6a4e3508808a05.svg",
     "static/media/light-logo.svg": "/portfolio/static/media/light-logo.060bc1a33908778a0f6c21523c22a8dd.svg",
     "index.html": "/portfolio/index.html",
-    "main.9b443f1e.css.map": "/portfolio/static/css/main.9b443f1e.css.map",
-    "main.515c5c9f.js.map": "/portfolio/static/js/main.515c5c9f.js.map"
+    "main.6149354b.css.map": "/portfolio/static/css/main.6149354b.css.map",
+    "main.fb13467d.js.map": "/portfolio/static/js/main.fb13467d.js.map"
   },
   "entrypoints": [
-    "static/css/main.9b443f1e.css",
-    "static/js/main.515c5c9f.js"
+    "static/css/main.6149354b.css",
+    "static/js/main.fb13467d.js"
   ]
 }
