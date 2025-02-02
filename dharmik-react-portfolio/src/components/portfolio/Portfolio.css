@@ -1,3 +1,4 @@
+/* Filter styling */
 .portfolio__filters {
   display: flex;
   align-items: center;
@@ -6,11 +7,7 @@
   margin-bottom: 2.5rem;
 }
 
-.portfolio__item {
-  cursor: pointer;
-  font-weight: var(--font-bold);
-}
-
+/* Item styling */
 .portfolio__item {
   cursor: pointer;
   font-weight: var(--font-bold);
@@ -25,11 +22,15 @@
   color: var(--first-color);
 }
 
+/* Portfolio container grid layout */
 .portfolio__container {
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.875rem;
 }
 
+
+/* Portfolio card styling */
 .portfolio__card {
   position: relative;
   overflow: hidden;
@@ -37,6 +38,13 @@
   box-shadow: var(--shadow);
 }
 
+.portfolio__card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fits the container */
+}
+
+/* Portfolio mask on hover */
 .portfolio__mask {
   background-color: #6c6ce5;
   position: absolute;
@@ -52,6 +60,7 @@
   opacity: 0.9;
 }
 
+/* Category styling */
 .portfolio__category {
   color: #fff;
   background-color: var(--first-color);
@@ -67,6 +76,7 @@
   transition: 0.3s;
 }
 
+/* Title styling */
 .portfolio__title {
   color: #fff;
   font-size: var(--h3-font-size);
@@ -79,13 +89,12 @@
   opacity: 0;
 }
 
-
-
+/* GitHub button */
 .portfolio__github-button {
   color: #fff;
   position: absolute;
-  bottom: 1.5rem; /* Distance from the bottom of the parent */
-  left: 1.5rem;   /* Distance from the left of the parent */
+  bottom: 1.5rem;
+  left: 1.5rem;
   font-size: var(--h3-font-size);
   display: block;
   background-color: #ffd15c;
@@ -99,18 +108,21 @@
   opacity: 0;
 }
 
-
-
 .portfolio__card:hover .portfolio__github-button {
   opacity: 1;
 }
-
 
 .portfolio__card:hover .portfolio__category {
   opacity: 1;
   transform: translateY(0);
 }
 
+.portfolio__card:hover .portfolio__title {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Media queries */
 @media screen and (max-width: 1024px) {
   .portfolio__filters {
     justify-content: center;

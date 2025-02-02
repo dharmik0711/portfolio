@@ -1,9 +1,9 @@
 const Experience = [
     {
         id: 1,
-        title: "freelance Software Developer ",
+        title: "Software Developer ",
         company: "Freelance",
-        yearsActive: "sept 2023 - may 2024",
+        yearsActive: "Sep 2023 - May 2024",
         information: [
             "Improved and optimized the company's website for a seamless customer experience",
             "Created, communicated, and managed project plans & project timelines",
