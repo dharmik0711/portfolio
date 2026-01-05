@@ -1,8 +1,8 @@
 {
-  "name": "dharmik-react-portfolio",
+  "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://dharmik0711.github.io/portfolio/",
+  "homepage": "https://dharmik0711.github.io/portfolio",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
