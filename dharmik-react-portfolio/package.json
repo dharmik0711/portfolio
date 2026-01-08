@@ -2,13 +2,15 @@
   "name": "dharmik-react-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://dharmik0711.github.io/portfolio/",
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
-  },
+"homepage": "https://dharmik0711.github.io/dharmik-portfolio",
+
+"scripts": {
+  "start": "react-scripts start",
+  "build": "react-scripts build",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
+},
+
   "dependencies": {
     "firebase": "^12.7.0",
     "framer-motion": "^12.24.10",
